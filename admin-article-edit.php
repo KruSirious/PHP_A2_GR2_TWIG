@@ -27,7 +27,17 @@ if (!empty($_GET['id'])) {
     }
 
     $article = getArticle($link, $id);
+    $categories = getCategories($link);
+    $tags = getTags($link);
 }
+
+echo $twig ->render('admin-article-add.html.twig',[
+    'article' => $article,
+    'connected' => isConnected(),
+    'username' => 'blob',
+    'categories' => $categories,
+    'tags' => $tags,
+]);
 
 include __DIR__.'/template/admin-article-add.php';
 

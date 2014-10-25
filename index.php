@@ -26,8 +26,6 @@ echo $twig->render('articles.html.twig',[
     'connected'=>true,
     'username' =>'blob',
     'perPage' =>$perPage,
-    'nbArticles'=>$nbArticles,
-    'currentPage'=> $currentPage,
     'nbPages' => $nbPages
 ]);
 

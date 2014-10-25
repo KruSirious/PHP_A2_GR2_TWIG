@@ -33,10 +33,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="" <?php  if(isset($homeActive)) { echo 'class="active"'; } ?>>Home</a></li>
-                <li><a href="categories.php">Categories</a></li>
-                <li><a href="tags.php">Tags</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="/" <?php  if(isset($homeActive)) { echo 'class="active"'; } ?>>Home</a></li>
+                <li><a href="/categories.php">Categories</a></li>
+                <li><a href="/tags.php">Tags</a></li>
+                <li><a href="/contact.php">Contact</a></li>
                 <?php if (true === isConnected()) { ?>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <span class="caret"></span></a>
