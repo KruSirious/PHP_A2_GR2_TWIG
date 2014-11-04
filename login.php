@@ -11,7 +11,7 @@ if (isConnected()) {
 }
 $missing_credential = false;
 $credential_error = false;
-
+$username = false;
 if (isset($_POST['loginSubmit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -30,6 +30,7 @@ if (isset($_POST['loginSubmit'])) {
 
 echo $twig->render('login.html.twig',[
     'connected' => isConnected(),
+    'username'=> $username,
     'credential_error' =>$credential_error,
     'missing_credential' =>$missing_credential,
     ]);

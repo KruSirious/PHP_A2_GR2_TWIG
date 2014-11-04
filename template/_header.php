@@ -33,7 +33,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/index.php" <?php  if(isset($homeActive)) { echo 'class="active"'; } ?>>Home</a></li>
+                <li><a href="index.php" <?php  if(isset($homeActive)) { echo 'class="active"'; } ?>>Home</a></li>
                 <li><a href="categories.php">Categories</a></li>
                 <li><a href="tags.php">Tags</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -65,9 +65,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <?php if (true === isConnected()) { ?>
                 <li><a href="#">Welcome <?php echo getSession()['username']; ?>!</a></li>
-                <li><a href="/logout.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
                 <?php } else { ?>
-                <li><a href="/login.php">Login</a></li>
+                <li><a href="login.php">Login</a></li>
                 <?php } ?>
             </ul>
         </div><!--/.nav-collapse -->

@@ -11,6 +11,12 @@ $nbArticles = countArticles($link); //nbArticleTotal
 $currentPage = !empty($_GET['p']) ? (int)$_GET['p'] : 1;// numéro de la page
 $nbPages = ceil($nbArticles/$perPage); // nombre de pagination
 
+if(isConnected()){
+    $username = $_SESSION['username'];
+}
+else{
+    $username = false;
+}
 
 if (0 >= $currentPage) {
     header('Location: index.php?p=1');
@@ -23,8 +29,8 @@ $articles = getArticles($link, null, ($currentPage-1)*$perPage, $perPage);
 
 echo $twig->render('articles.html.twig',[
     'articles' =>$articles,
-    'connected'=>true,
-    'username' =>'blob',
+    'connected'=>true   ,
+    'username' =>$username,
     'perPage' =>$perPage,
     'nbPages' => $nbPages
 ]);
